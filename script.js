@@ -86,6 +86,9 @@ container.addEventListener('click', (e) => {
         input.value = secondNumber;
     }  else if(operator === '/' && secondNumber === '0'){
         input.value = "Error";
+        firstNumber = '';
+        secondNumber = '';
+        operator = '';
         return;
     }  else if (ch === '=' && secondNumber !== ''){
         result = operate(operator, Number(firstNumber), Number(secondNumber));
